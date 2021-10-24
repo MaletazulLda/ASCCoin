@@ -187,9 +187,9 @@ add_dependencies(WalletService version)
 add_dependencies(zedwallet++ version)
 
 # Finally build the binaries
-set_property(TARGET TurtleCoind PROPERTY OUTPUT_NAME "ASCCoind")
+set_property(TARGET TurtleCoind PROPERTY OUTPUT_NAME "ATSCCoind")
 set_property(TARGET zedwallet++ PROPERTY OUTPUT_NAME "zedwallet")
-set_property(TARGET WalletService PROPERTY OUTPUT_NAME "asc-service")
+set_property(TARGET WalletService PROPERTY OUTPUT_NAME "atsc-service")
 set_property(TARGET miner PROPERTY OUTPUT_NAME "miner")
 set_property(TARGET cryptotest PROPERTY OUTPUT_NAME "cryptotest")
 set_property(TARGET WalletApi PROPERTY OUTPUT_NAME "wallet-api")
@@ -197,7 +197,7 @@ set_property(TARGET WalletUpgrader PROPERTY OUTPUT_NAME "wallet-upgrader")
 
 # Additional make targets, can be used to build a subset of the targets
 # e.g. make pool will build only TurtleCoind and service
-add_custom_target(pool DEPENDS ASCCoind WalletService)
-add_custom_target(solominer DEPENDS ASCCoind zedwallet++ miner)
-add_custom_target(cli DEPENDS ASCCoind zedwallet++)
+add_custom_target(pool DEPENDS ATSCCoind WalletService)
+add_custom_target(solominer DEPENDS ASTCCoind zedwallet++ miner)
+add_custom_target(cli DEPENDS ASTCCoind zedwallet++)
 add_custom_target(zedwallet DEPENDS zedwallet++)
